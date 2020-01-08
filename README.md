@@ -52,9 +52,7 @@ Instructions:
 		
 	Additionally by default, Spark.sql.shuffle.partitions is set to 200, which is ideal for large datasets, but far too much for the small streams we are dealing with.
 	(Reference : http://blog.madhukaraphatak.com/dynamic-spark-shuffle-partitions/ )
-		
-	With the default values, you can see in the 
-		
+				
 	Reducing this to 5 had amazing performance improvements, with the number processedRowsPerSecond peaking at over 1000/s, with the improvement due to the reduced number of shuffling tasks being performed.
     
     ![step3-2-2](images/step3-2-2.png)
